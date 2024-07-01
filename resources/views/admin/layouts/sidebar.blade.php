@@ -83,6 +83,25 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarProductDetails" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarProductDetails">
+                        <i class="ri-layout-3-line"></i>
+                        <span data-key="t-layouts">Product Details</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarProductDetails">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.product_details.index') }}" class="nav-link"
+                                   data-key="t-horizontal">Danh sách</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.product_details.create') }}" class="nav-link"
+                                   data-key="t-horizontal">Thêm mới</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarColors" data-bs-toggle="collapse" role="button"
                        aria-expanded="false" aria-controls="sidebarColors">
                         <i class="ri-layout-3-line"></i>
@@ -101,24 +120,62 @@
                         </ul>
                     </div>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="" data-bs-toggle="collapse" role="button"
-                       aria-expanded="false" aria-controls="">
+                    <a class="nav-link menu-link" href="#sidebarSizes" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarSizes">
                         <i class="ri-layout-3-line"></i>
-                        <span data-key="t-layouts">Sản phẩm</span>
+                        <span data-key="t-layouts">Sizes</span>
                     </a>
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="{{ route('admin.sizes.index') }}" class="nav-link"
-                               data-key="t-horizontal">Danh sách</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('admin.sizes.create') }}" class="nav-link"
-                               data-key="t-horizontal">Thêm mới</a>
-                        </li>
-                    </ul>
+                    <div class="collapse menu-dropdown" id="sidebarSizes">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.sizes.index') }}" class="nav-link"
+                                   data-key="t-horizontal">Danh sách</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.sizes.create') }}" class="nav-link"
+                                   data-key="t-horizontal">Thêm mới</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarFabrics" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarFabrics">
+                        <i class="ri-layout-3-line"></i>
+                        <span data-key="t-layouts">Fabrics</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarFabrics">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.fabrics.index') }}" class="nav-link"
+                                   data-key="t-horizontal">Danh sách</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.fabrics.create') }}" class="nav-link"
+                                   data-key="t-horizontal">Thêm mới</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarImages" data-bs-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarImages">
+                        <i class="ri-layout-3-line"></i>
+                        <span data-key="t-layouts">Images</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarImages">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.images.index') }}" class="nav-link" data-key="t-horizontal">Danh sách</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.images.create') }}" class="nav-link" data-key="t-horizontal">Thêm mới</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
 
             </ul>
         </div>

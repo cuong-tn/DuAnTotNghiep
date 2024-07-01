@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('fabrics', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug');
-            $table->timestamp('create_date')->nullable();
-            $table->timestamp('update_date')->nullable();
-            $table->tinyInteger('category_status');
+            $table->string('fabric');
+            $table->timestamp('create_date')->useCurrent();
+            $table->timestamp('update_date')->useCurrent()->useCurrentOnUpdate();
+
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('fabrics');
     }
 };

@@ -34,7 +34,6 @@
                     <td>{{ $size->name }}</td>
                     <td>
                         <form action="{{ route('admin.sizes.destroy',$size->id) }}" method="POST">
-                            <a class="btn btn-info" href="{{ route('admin.sizes.show',$size->id) }}">Show</a>
                             <a class="btn btn-primary" href="{{ route('admin.sizes.edit',$size->id) }}">Edit</a>
                             @csrf
                             @method('DELETE')

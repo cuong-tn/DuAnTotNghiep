@@ -5,6 +5,9 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ColorController;
 use App\Http\Controllers\Admin\SizeController;
+use App\Http\Controllers\Admin\FabricController;
+use App\Http\Controllers\Admin\ProductDetailController;
+use App\Http\Controllers\Admin\ImageController;
 
 
 /*
@@ -40,5 +43,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('products', ProductController::class);
     Route::resource('colors', ColorController::class);
     Route::resource('sizes', SizeController::class);
+    Route::resource('fabrics', FabricController::class);
+    Route::resource('product_details', ProductDetailController::class);
+    Route::resource('images', ImageController::class);
+
 });
 

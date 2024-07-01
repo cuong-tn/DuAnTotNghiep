@@ -9,8 +9,8 @@
     <form action="{{ route('admin.categories.store') }}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="category_name">Name</label>
-            <input type="text" class="form-control" id="category_name" name="category_name" required>
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
         </div>
         <div class="form-group">
             <label for="slug">Slug</label>

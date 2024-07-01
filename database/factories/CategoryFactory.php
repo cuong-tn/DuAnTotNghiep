@@ -20,7 +20,7 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            'category_name' => $this->faker->word,
+            'name' => $this->faker->word,
             'slug' => $this->faker->slug,
             'create_date' => now(),
             'update_date' => now(),

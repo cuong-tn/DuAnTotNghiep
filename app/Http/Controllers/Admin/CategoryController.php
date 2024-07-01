@@ -33,13 +33,13 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'category_name' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:categories',
             'category_status' => 'required|boolean',
         ]);
 
         $category = new Category();
-        $category->category_name = $request->category_name;
+        $category->name = $request->name;
         $category->slug = $request->slug;
         $category->create_date = now();
         $category->update_date = now();
@@ -71,12 +71,12 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $request->validate([
-            'category_name' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:categories,slug,' . $category->id,
             'category_status' => 'required|boolean',
         ]);
 
-        $category->category_name = $request->category_name;
+        $category->name = $request->name;
         $category->slug = $request->slug;
         $category->update_date = now();
         $category->category_status = $request->category_status;

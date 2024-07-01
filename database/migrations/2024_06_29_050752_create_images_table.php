@@ -11,14 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug');
+            $table->unsignedBigInteger('product_detail_id');
+            $table->string('name_image');
+            $table->string('url');
             $table->timestamp('create_date')->nullable();
             $table->timestamp('update_date')->nullable();
-            $table->tinyInteger('category_status');
             $table->timestamps();
+
+            // Thêm ràng buộc khóa ngoại
+            $table->foreign('product_detail_id')->references('id')->on('product_details')->onDelete('cascade');
+
+            // Thêm index
+            $table->index('product_detail_id');
         });
     }
 
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('images');
     }
 };

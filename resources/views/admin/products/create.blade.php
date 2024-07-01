@@ -9,8 +9,8 @@
     <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="product_name">Name</label>
-            <input type="text" class="form-control" id="product_name" name="product_name" required>
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
         </div>
         <div class="form-group">
             <label for="product_price">Price</label>
